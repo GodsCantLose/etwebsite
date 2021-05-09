@@ -3,12 +3,13 @@
 <head>
 <meta charset=UTF-8>
 <meta name=viewport content="width=device-width, initial-scale=1.0">
-<style>::-webkit-scrollbar{width:20px}::-webkit-scrollbar-track{box-shadow:inset 0 0 5px grey;border-radius:10px}::-webkit-scrollbar-thumb{background:#8b8b8a;border-radius:10px}::-webkit-scrollbar-thumb:hover{background:radial-gradient(#8b8b8a,#18a7c2)}</style>
+<style>::-webkit-scrollbar{width:16px}::-webkit-scrollbar-track{box-shadow:inset 0 0 5px grey;border-radius:10px}::-webkit-scrollbar-thumb{background:#8b8b8a;border-radius:10px}::-webkit-scrollbar-thumb:hover{background:radial-gradient(#8b8b8a,#18a7c2)}</style>
 <link href=https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css rel=stylesheet>
 <link rel=stylesheet href=assets/css/styles.css>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css>
 <link rel=stylesheet href="https://fonts.googleapis.com/css?family=Jura">
 <link rel=stylesheet href=https://use.fontawesome.com/releases/v5.8.1/css/all.css integrity=sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf crossorigin=anonymous>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css">
 <meta name="propeller" content="f031aabac1d8c8289d44f9f70b24a92a">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5G0MHT1PK"></script>
@@ -28,6 +29,12 @@
 <meta content="#00b0f2" data-react-helmet="true" name="theme-color">
 <meta name="msapplication-TileImage" content="https://i.imgur.com/stwTrvo.png"> 
 <div class=loading>Loading&#8230;</div>
+<script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+  new Crate({
+    server: '618843693272662057',
+    channel: '813437965647872031',
+  })
+</script>
 </head>
 <body>
 <script type=text/javascript>window.addEventListener("DOMContentLoaded",function(d){var b=document.getElementById("stage");var f=function(g){b.appendChild(a[0])};var a=b.getElementsByTagName("a");for(var c=0;c<a.length;c++){a[c].addEventListener("animationend",f,false)}},false);</script>
@@ -35,9 +42,12 @@
 <script>$(window).on("load",function(){$(".loading").fadeOut("slow")});</script>
 <script>var TxtRotate=function(a,b,c){this.toRotate=b;this.el=a;this.loopNum=0;this.period=parseInt(c,10)||2000;this.txt="";this.tick();this.isDeleting=false};TxtRotate.prototype.tick=function(){var a=this.loopNum%this.toRotate.length;var c=this.toRotate[a];if(this.isDeleting){this.txt=c.substring(0,this.txt.length-1)}else{this.txt=c.substring(0,this.txt.length+1)}this.el.innerHTML='<span class="wrap">'+this.txt+"</span>";var b=this;var d=250-Math.random()*100;if(this.isDeleting){d/=2}if(!this.isDeleting&&this.txt===c){d=this.period;this.isDeleting=true}else{if(this.isDeleting&&this.txt===""){this.isDeleting=false;this.loopNum++;d=500}}setTimeout(function(){b.tick()},d)};window.onload=function(){var c=document.getElementsByClassName("txt-rotate");for(var b=0;b<c.length;b++){var d=c[b].getAttribute("data-rotate");var e=c[b].getAttribute("data-period");if(d){new TxtRotate(c[b],JSON.parse(d),e)}}var a=document.createElement("style");a.type="text/css";a.innerHTML=".txt-rotate > .wrap { border-right: 0.08em solid #666 }";document.body.appendChild(a)};</script>
 <script src="https://propu.sh/pfe/current/tag.min.js?z=4160984" data-cfasync="false" async></script>
-<a href=# class=scrolltop id=scroll-top>
-<i class='bx bx-up-arrow-alt scrolltop__icon'></i>
-</a>
+<div class="alert cookiealert" role="alert">
+    We use <b>Cookies</b> &#x1F36A; to ensure best experience on the website.
+    <button type="button" class="buttoncookies acceptcookies">
+        Accept
+    </button>
+</div>
 <header class=l-header id=header>
 <nav class="nav bd-container">
 <div class=nav__logo>
@@ -163,11 +173,12 @@ Includes SelfMade Scripts: Teleporter & Iron Menu.
 </div>
 </section>
 </main>
+<div class="pattern">
 <footer class="footer section">
 <div class="footer__container bd-container bd-grid">
 <div class=footer__content>
 <h3 class=footer__title>
-<a href=# class=footer__logo>ET Evolution</a>
+<a href=# class=footer__logo>⚡️ ET Evolution</a>
 </h3>
 <p class=footer__description>By @GodsCantLose</p>
 </div>
@@ -193,9 +204,13 @@ Includes SelfMade Scripts: Teleporter & Iron Menu.
 <a href=https://www.instagram.com/godscantlose/ class=footer__social><i class='bx bxl-instagram-alt bx-tada'></i></a>
 </div>
 </div>
-<p class=footer__copy>&#169; 2021 ExoticTrainer INC. All rights reserved</p>
+<div class="tmark">
+		 © 2021 ExoticTrainer INC. All rights reserved By <a href="https://www.exotictrainer.com">GOD</a>
+	</div>
 </footer>
+</div>
 <script src=https://unpkg.com/scrollreveal></script>
 <script src=assets/js/main.js></script>
+<script src=assets/js/cookiealert.js></script>
 </body>
 </html>

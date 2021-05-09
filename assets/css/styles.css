@@ -11,6 +11,7 @@
   --text-color: #5B5757;
   --text-color-light: #8F8A8A;
   --body-color: #FEFBFB;
+  --Footers-color: #171717;
   --container-color: #FFF;
   /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
@@ -61,6 +62,7 @@ body.dark-theme{
 	background-color: var(--body-color);
 	--body-color: #FFF;
 	--first-color-send: rgba(45,94,103,0.85);
+	--Footers-color: #fff;
 }
 /*========== Button Dark/Light ==========*/
 .change-theme{
@@ -73,7 +75,7 @@ body.dark-theme{
   cursor: pointer;
 }
 body{
-	background-image: linear-gradient(160deg, rgba(0, 0, 0, 0), rgba(35, 35, 35, 0.53), rgba(0, 80, 150, 0.40)),
+	background-image: linear-gradient(160deg, rgba(0, 0, 0, 0), rgba(35, 35, 35, 0.53), rgba(0, 0, 0, 0.40)),
     url('hd2.jpg');
 	--body-color: #0f0f0f;
 	background-size: 100%;
@@ -87,6 +89,7 @@ body{
   --text-color: #D1C7C8;
   line-height: 1.6;
   --first-color-send: rgba(29,29,35,0.75);
+  --Footers-color: #171717;
 }
 h2,h3,ul,p{
   margin: 0;
@@ -133,6 +136,29 @@ img{
   margin-bottom: var(--mb-3);
 }
 /*========== Loader ==========*/
+.tmark{
+		color: var(--text-color);
+		background: var(--Footers-color);
+		text-align: center;
+		padding: 10px;
+		font-family: 'Poppins', sans-serif;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		user-select: none;
+		}
+		.tmark a
+		{
+			text-decoration: none;
+			color: #fff;
+			border: 0px solid transparent;
+			font-family: 'Poppins', sans-serif;
+			padding: 3px 10px;
+			border-radius: 30px;
+			background: linear-gradient(45deg,#2962FF,#6200EA);
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			user-select: none;
+		}
 /* Absolute Center Spinner */
 .loading {
   position: fixed;
@@ -347,6 +373,21 @@ box-shadow: rgba(255,255,255, 0.75) 1.5em 0 0 0, rgba(255,255,255, 0.75) 1.1em 1
 .scroll-header{
   box-shadow: 0 1px 4px rgba(0,0,0,.1);
 }
+.pattern {
+        position: relative;
+		background: var(--Footers-color);
+        
+    }
+    .pattern:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 /* Scroll top */
 .scrolltop{
   position: fixed;
@@ -372,6 +413,39 @@ box-shadow: rgba(255,255,255, 0.75) 1.5em 0 0 0, rgba(255,255,255, 0.75) 1.1em 1
 .show-scroll{
   visibility: visible;
   bottom: 1.5rem;
+}
+.cookiealert {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 !important;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 0;
+    transform: translateY(100%);
+    transition: all 500ms ease-out;
+    color: #ecf0f1;
+    background: #212327;
+	text-align: center;
+}
+
+.cookiealert.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0%);
+    transition-delay: 1000ms;
+	background: rgba(0, 0, 0, 0.53);
+}
+
+.cookiealert a {
+    text-decoration: underline
+}
+
+.cookiealert .acceptcookies {
+    margin-left: 10px;
+    vertical-align: baseline;
 }
 /*========== HOME ==========*/
 .home__container{
@@ -442,6 +516,21 @@ box-shadow: rgba(255,255,255, 0.75) 1.5em 0 0 0, rgba(255,255,255, 0.75) 1.1em 1
 .button-link:hover{
   background-color: transparent;
   color: var(--first-color-alt);
+}
+.buttoncookies{
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 0.25rem 1rem;
+  border-radius: 7px;
+  font-weight: var(--font-semi-bold);
+  transition: .3s;
+}
+.buttoncookies:hover{
+  background-color: var(--first-color-alt);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3rem;
 }
 /*=================================================================
 	Services
@@ -549,6 +638,13 @@ box-shadow: rgba(255,255,255, 0.75) 1.5em 0 0 0, rgba(255,255,255, 0.75) 1.1em 1
 		font-size: 23px;
 		position: absolute;
 		}
+		.cookiealert {
+	display: none;
+}
+
+.cookiealert.show {
+	display: none;
+}
 }
 /*========== ACCESSORIES ==========*/
 .accessory__container{
@@ -674,7 +770,7 @@ box-shadow: rgba(255,255,255, 0.75) 1.5em 0 0 0, rgba(255,255,255, 0.75) 1.1em 1
 .footer__copy{
   text-align: center;
   font-size: var(--small-font-size);
-  color: var(--text-color-light);
+  color: #fff;
   margin-top: 4rem;
 }
 /*========== MEDIA QUERIES ==========*/
