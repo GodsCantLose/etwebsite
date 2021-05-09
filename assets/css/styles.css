@@ -114,29 +114,6 @@ h1{
 		text-shadow: none;
 	}
 }
-a:link {
-  color: #f19c09;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:visited {
-  color: green;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #f19c09;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-a:active {
-  color: #f19c09;
-  background-color: transparent;
-  text-decoration: underline;
-}
 ul{
   padding: 0;
   list-style: none;
