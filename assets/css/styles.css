@@ -114,6 +114,7 @@ h1{
 		text-shadow: none;
 	}
 }
+
 ul{
   padding: 0;
   list-style: none;
@@ -125,6 +126,7 @@ img{
   max-width: 100%;
   height: auto;
 }
+/*========== CLASS CSS ==========*/
 .section{
   padding: 4rem 0 2rem;
 }
